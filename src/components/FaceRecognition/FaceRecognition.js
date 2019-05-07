@@ -1,10 +1,29 @@
 import React from 'react'
-
-const FaceRecognition = () => {
+import './FaceRecognition.css'
+const FaceRecognition = (props) => {
     return(
-        <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
-            <p className="f3 link dim black underline pa3 pointer">Sign Out</p>
-        </nav>
+        <div className="center ma">
+            <div className="absolute mt2">
+                <img 
+                    id="inputimage"
+                    src={props.imageUrl}  
+                    alt="" 
+                    style={{ width: '500px', height: 'auto'}}
+                />
+                <div 
+                    className="bounding-box" 
+                    style={{ 
+                        top: props.box.topRow, 
+                        right: props.box.rightCol,
+                        bottom: props.box.bottomRow,
+                        left: props.box.leftCol
+
+                    }}
+                >
+                </div>
+
+            </div>
+        </div> 
     )
 }
 

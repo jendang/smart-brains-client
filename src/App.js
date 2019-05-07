@@ -1,14 +1,14 @@
 import React from 'react';
 import Particles from 'react-particles-js'; //animate bg
 import Clarifai from 'clarifai' //for face-dection API
-
+import './App.css'
 
 import Navigation from './components/Navigation/Navigation'
 import Logo from './components/Logo/Logo'
 import Rank from './components/Rank/Rank'
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm'
 import FaceRecognition from './components/FaceRecognition/FaceRecognition'
-import './App.css'
+import SignIn from './components/SignIn/SignIn'
 
 const particlesOption = {
   particles: {
@@ -31,7 +31,8 @@ class App extends React.Component {
   state = {
     input: '',
     imageUrl: '',
-    box: {}
+    box: {},
+    route: 'signin'
   }
 
   calculateFaceLocation = (data) => {
@@ -76,6 +77,7 @@ class App extends React.Component {
       <div className="App">
         <Particles params={particlesOption} className="particles" />
         <Navigation />
+        <SignIn />
         <Logo />
         <Rank />
         <ImageLinkForm 

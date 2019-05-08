@@ -1,14 +1,15 @@
 import React from 'react';
 import Particles from 'react-particles-js'; //animate bg
 import Clarifai from 'clarifai' //for face-dection API
-
+import './App.css'
 
 import Navigation from './components/Navigation/Navigation'
 import Logo from './components/Logo/Logo'
 import Rank from './components/Rank/Rank'
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm'
 import FaceRecognition from './components/FaceRecognition/FaceRecognition'
-import './App.css'
+import SignIn from './components/SignIn/SignIn'
+import SignUp from './components/SignUp/SignUp'
 
 const particlesOption = {
   particles: {
@@ -31,7 +32,9 @@ class App extends React.Component {
   state = {
     input: '',
     imageUrl: '',
-    box: {}
+    box: {},
+    route: 'signin',
+    isSignedIn: false
   }
 
   calculateFaceLocation = (data) => {
@@ -71,21 +74,46 @@ class App extends React.Component {
      
   }
 
+  onRouteChange = (route) => {
+    if(route === 'signout'){
+      this.setState({ isSignedIn: false})
+    } else if (route === 'home'){
+      this.setState({ isSignedIn: true})
+    }
+    this.setState({ route })
+  }
+
   render(){
+    const { isSignedIn, route, imageUrl, box  } = this.state
     return (
       <div className="App">
         <Particles params={particlesOption} className="particles" />
-        <Navigation />
-        <Logo />
-        <Rank />
-        <ImageLinkForm 
-          onInputChange={this.onInputChange} 
-          onButtonSubmit={this.onSubmit}
-        />
-        <FaceRecognition 
-          imageUrl={ this.state.imageUrl }
-          box={this.state.box}
-        />
+        <Navigation 
+          isSignedIn={isSignedIn} 
+          onRouteChange={this.onRouteChange}/>
+
+        {route === 'home' 
+          ? 
+          <div>
+            <Logo />
+            <Rank />
+            <ImageLinkForm 
+              onInputChange={this.onInputChange} 
+              onButtonSubmit={this.onSubmit}
+            />
+            <FaceRecognition 
+              imageUrl={ imageUrl }
+              box={ box }
+            />
+          </div>  
+          : (
+            route === 'signin' 
+            ? 
+            <SignIn onRouteChange={this.onRouteChange}/>
+            :
+            <SignUp onRouteChange={ this.onRouteChange }/>
+            )
+        }
         
       </div>
     );

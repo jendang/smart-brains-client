@@ -1,13 +1,17 @@
 import React from 'react'
+ 
 
-
-const SignIn = (props) => {
+const SignUp = (props) => {
     return (
         <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
             <main className="pa4 black-80 center">
                 <form className="measure center">
                     <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                        <legend className="f1 fw6 ph0 mh0">Sign In</legend>
+                        <legend className="f1 fw6 ph0 mh0">Sign Up</legend>
+                        <div className="mt3">
+                            <label className="db fw6 lh-copy f6" forhtml="name">Name</label>
+                            <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="name"  id="name" />
+                        </div>
                         <div className="mt3">
                             <label className="db fw6 lh-copy f6" forhtml="email-address">Email</label>
                             <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email-address"  id="email-address" />
@@ -21,16 +25,8 @@ const SignIn = (props) => {
                                 onClick={() => props.onRouteChange('home')}
                                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
                                 type="submit" 
-                                value="Sign in" 
+                                value="Submit" 
                             />
-                        </div>
-                        <div className="lh-copy mt3">
-                            <p  
-                                onClick={() => props.onRouteChange('signup')}
-                                className="f6 link dim black db"
-                            >
-                                Sign up
-                            </p>
                         </div>
                     </fieldset>
                 </form>
@@ -39,4 +35,4 @@ const SignIn = (props) => {
     )
 }
 
-export default SignIn
+export default SignUp

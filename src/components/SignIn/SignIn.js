@@ -16,7 +16,6 @@ class SignIn extends React.Component {
 
     onSubmitSignIn = (event) => {
         event.preventDefault()
-        //console.log(this.state)
         fetch('http://localhost:4000/signin', {
             method: 'post',
             headers: {

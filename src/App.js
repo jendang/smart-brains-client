@@ -27,7 +27,6 @@ const app = new Clarifai.App({
   apiKey: 'b9a8ed341183472b90520b9da5aa9cbb'
 });
 
-
 class App extends React.Component {
   state = {
     input: '',
@@ -112,7 +111,8 @@ class App extends React.Component {
                 entries: count
               }}) ==> will change the whole user obj*/ 
 
-              //Object.assign(obj, the property)
+              //Object.assign(obj, the property) 
+              // will change only entries in user obj
               this.setState(Object.assign(this.state.user, { entries: count }))
             })
         }//if

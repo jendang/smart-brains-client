@@ -41,7 +41,7 @@ class SignUp extends React.Component {
                     this.props.onRouteChange('home')
                 }
             })
-            //.catch(err => console(err)) 
+            .catch(console.log) 
     }
     
     render() {

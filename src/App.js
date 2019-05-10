@@ -27,6 +27,20 @@ const app = new Clarifai.App({
   apiKey: 'b9a8ed341183472b90520b9da5aa9cbb'
 });
 
+const initialState = {
+  input: '',
+    imageUrl: '',
+    box: {},
+    route: 'signin',
+    isSignedIn: false,
+    user: {
+      id: '',
+      email: '',
+      name: '',
+      entries: 0,
+      joined: ''
+    }
+}
 class App extends React.Component {
   state = {
     input: '',
@@ -67,8 +81,6 @@ class App extends React.Component {
     const image = document.getElementById('inputimage')
     const width = Number(image.width)
     const height = Number(image.height)
-    //console.log(width, height)
-    //console.log(faceDetection)
     return {
       leftCol: faceDetection.left_col * width,
       topRow: faceDetection.top_row * height,
@@ -78,12 +90,10 @@ class App extends React.Component {
   }
 
   displayFaceBox = (box) => {
-    //console.log(box)
     this.setState({ box: box })
   }
 
   onInputChange = (event) => {
-    //console.log(event.target.value)
     this.setState({ input: event.target.value })
   }
 
@@ -115,6 +125,7 @@ class App extends React.Component {
               // will change only entries in user obj
               this.setState(Object.assign(this.state.user, { entries: count }))
             })
+            .catch(console.log)
         }//if
         this.displayFaceBox(this.calculateFaceLocation(response))
       })
@@ -124,7 +135,7 @@ class App extends React.Component {
 
   onRouteChange = (route) => {
     if(route === 'signout'){
-      this.setState({ isSignedIn: false})
+      this.setState(initialState)
     } else if (route === 'home'){
       this.setState({ isSignedIn: true})
     }

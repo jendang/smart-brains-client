@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 class SignIn extends React.Component {
     state = {
         signInEmail: '',

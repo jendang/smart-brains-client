@@ -34,8 +34,34 @@ class App extends React.Component {
     imageUrl: '',
     box: {},
     route: 'signin',
-    isSignedIn: false
+    isSignedIn: false,
+    user: {
+      id: '',
+      email: '',
+      name: '',
+      entries: 0,
+      joined: ''
+    }
   }
+
+  loadUser = (data) => {
+    this.setState({ user: {
+      id: data.id,
+      email: data.email,
+      name: data.name,
+      entries: data.entries,
+      join: data.joined
+      }
+    })
+  }
+
+  //testing fetch data from server
+  /* componentDidMount() {
+    const baseUrl = 'http://localhost:4000' //root from server
+    fetch(baseUrl)
+      .then(response => response.json())
+      .then(console.log)
+  } */
 
   calculateFaceLocation = (data) => {
     const faceDetection = data.outputs[0].data.regions[0].region_info.bounding_box
@@ -69,7 +95,29 @@ class App extends React.Component {
         Clarifai.FACE_DETECT_MODEL,
         this.state.input
       )
-      .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
+      .then(response => {
+        if(response){
+          fetch('http://localhost:4000/image', {
+            method: 'put',
+            headers: {
+              'content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              id: this.state.user.id, 
+            })
+          })
+            .then(response => response.json())
+            .then(count => {
+              /* this.setState({ user: {
+                entries: count
+              }}) ==> will change the whole user obj*/ 
+
+              //Object.assign(obj, the property)
+              this.setState(Object.assign(this.state.user, { entries: count }))
+            })
+        }//if
+        this.displayFaceBox(this.calculateFaceLocation(response))
+      })
       .catch(err => console.log(err))
      
   }
@@ -96,7 +144,10 @@ class App extends React.Component {
           ? 
           <div>
             <Logo />
-            <Rank />
+            <Rank 
+              name={this.state.user.name}
+              entries={this.state.user.entries}
+            />
             <ImageLinkForm 
               onInputChange={this.onInputChange} 
               onButtonSubmit={this.onSubmit}
@@ -109,9 +160,9 @@ class App extends React.Component {
           : (
             route === 'signin' 
             ? 
-            <SignIn onRouteChange={this.onRouteChange}/>
+            <SignIn loadUser={ this.loadUser } onRouteChange={this.onRouteChange}/>
             :
-            <SignUp onRouteChange={ this.onRouteChange }/>
+            <SignUp loadUser={ this.loadUser} onRouteChange={ this.onRouteChange }/>
             )
         }
         

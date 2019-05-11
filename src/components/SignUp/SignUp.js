@@ -23,7 +23,7 @@ class SignUp extends React.Component {
     onSubmitSignUp = (event) => {
         event.preventDefault()
         //console.log(this.state)
-        fetch('http://localhost:4000/signup', {
+        fetch('https://image-face-detection.herokuapp.com/signup', {
             method: 'post',
             headers: {
                 'content-Type': 'application/json'

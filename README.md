@@ -1,4 +1,6 @@
-Demo link: https://smart-brains.netlify.com/:sunglasses:
+Demo link: https://smart-brains.netlify.com/
+
+:sunglasses:
 
 
 Backend: https://github.com/jendang/smart-brains-server

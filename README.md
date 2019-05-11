@@ -1,4 +1,6 @@
-Demo link: https://smart-brains.netlify.com/
+Demo link: https://smart-brains.netlify.com/:sunglasses:
+
+
 Backend: https://github.com/jendang/smart-brains-server
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/19e5d51f-fedb-49c6-9734-dae08fb1414f/deploy-status)](https://app.netlify.com/sites/smart-brains/deploys)
 
-# :sunglasses: Smart brains :sunglasses: ![smart-brains](https://github.com/jendang/smart-brains-client/blob/master/src/components/Logo/brain.png)
+# :sunglasses: Smart brains :sunglasses: 
 
 ## :point_right: :point_right: [Checkout the deployed version here! ](https://smart-brains.netlify.com/) :point_left: :point_left:
 

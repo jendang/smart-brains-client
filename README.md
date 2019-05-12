@@ -1,4 +1,4 @@
-Backend: https://github.com/jendang/smart-brains-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/19e5d51f-fedb-49c6-9734-dae08fb1414f/deploy-status)](https://app.netlify.com/sites/smart-brains/deploys)
 
 # :sunglasses: Smart brains :sunglasses:
 

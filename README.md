@@ -60,7 +60,7 @@ The project allow you to detect a face when you insert an image from an url inpu
 
 I created a project to manage my workflow inside the git repository. I divided my tasks into three sessions:
 * todos: list all steps/activities that you need to do for the project
-* in process: I move the todos here when I am working on that
+* in progress: I move the todos here when I am working on that
 * done: I move the tasks here when I finished it
 
 [Checkout my project's planning here](https://github.com/jendang/smart-brains-client/projects/1)

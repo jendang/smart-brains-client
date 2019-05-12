@@ -1,97 +1,63 @@
-Demo link: https://smart-brains.netlify.com/
-
-
-
 Backend: https://github.com/jendang/smart-brains-
-
 
 # :sunglasses: Smart brains :sunglasses:
 
-[Checkout the deployed version here! ](https://smart-brains.netlify.com/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+## :point_right: :point_right: [Checkout the deployed version here! ](https://smart-brains.netlify.com/) :point_left: :point_left:
 
-One Paragraph of project description goes here
+## What is this project about
 
-## Getting Started
+The project allow you to detect a face when you insert an image from an url input. You can do it only once you register/login with your account! Everytime you detect a face, your entries count will update so you will know how many times you input image to detect.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Table of contents
 
-### Prerequisites
+* Technologies used
+* Goals for this project
+* Prerequisites 
+* Features can add with pull requests
+* My git work flow
+* My agile workflow
 
-What things you need to install the software and how to install them
+## Technologies used
 
-```
-Give examples
-```
+### Front-end
 
-### Installing
+* [React](https://github.com/jendang/smart-brains-client/blob/master/create-react-app-docs)
 
-A step by step series of examples that tell you how to get a development env running
+### Back-end
 
-Say what the step will be
+* [postgresql] ()
+* [express] ()
+* [heroku for deploy] ()
+* [Backend git REPO](https://github.com/jendang/smart-brains-server)
 
-```
-Give the example
-```
+## Goals for this project
 
-And repeat
+* To practice myself
+* Full stack project for my portfolio
+* To showcase disciplined git usage 
 
-```
-until finished
-```
+## Prerequisites
 
-End with an example of getting some data out of the system or using it for a little demo
+* node
+* postgresql
 
-## Running the tests
+## Features can add with pull requests
 
-Explain how to run the automated tests for this system
+## My git work flow
 
-### Break down into end to end tests
+* Good commit messages
+* Well named branches
 
-Explain what these tests test and why
+## My agile workflow 
 
-```
-Give an example
-```
+I created a project to manage my workflow inside the git repository. I divided my tasks into three sessions:
+* todos: list all steps/activities that you need to do for the project
+* in process: I move the todos here when I am working on that
+* done: I move the tasks here when I finished it
 
-### And coding style tests
+[Checkout my project's planning here] (https://github.com/jendang/smart-brains-client/projects/1)
 
-Explain what these tests test and why
 
-```
-Give an example
-```
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 

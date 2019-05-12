@@ -8,6 +8,8 @@
 
 The project allow you to detect a face when you insert an image from an url input. You can do it only once you register/login with your account! Everytime you detect a face, your entries count will update so you will know how many times you input image to detect.
 
+![smart-brains-interface](https://github.com/jendang/smart-brains-client/blob/master/smart-brains-ui.png)
+
 ## Table of contents
 
 * Technologies used

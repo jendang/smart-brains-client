@@ -16,6 +16,7 @@ The project allow you to detect a face when you insert an image from an url inpu
 * Features can add with pull requests
 * My git work flow
 * My agile workflow
+* APIs/Packages references
 
 ## Technologies used
 
@@ -25,9 +26,9 @@ The project allow you to detect a face when you insert an image from an url inpu
 
 ### Back-end
 
-* [postgresql] ()
-* [express] ()
-* [heroku for deploy] ()
+* [postgresql](https://www.postgresql.org/)
+* [express](https://expressjs.com/)
+* [heroku for deploy](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
 * [Backend git REPO](https://github.com/jendang/smart-brains-server)
 
 ## Goals for this project
@@ -43,7 +44,12 @@ The project allow you to detect a face when you insert an image from an url inpu
 
 ## Features can add with pull requests
 
-## My git work flow
+* User profile page: edit, adding avatar
+* OAuth with Facebook, Google, ...
+* Detect faces in an image
+* Implementing Redux 
+
+## My git workflow
 
 * Good commit messages
 * Well named branches
@@ -55,8 +61,14 @@ I created a project to manage my workflow inside the git repository. I divided m
 * in process: I move the todos here when I am working on that
 * done: I move the tasks here when I finished it
 
-[Checkout my project's planning here] (https://github.com/jendang/smart-brains-client/projects/1)
+[Checkout my project's planning here](https://github.com/jendang/smart-brains-client/projects/1)
 
+## APIs/Packages references
+
+* [Clarifai API for face-detection](https://www.clarifai.com/models/face-detection-image-recognition-model-a403429f2ddf4b49b307e318f00e528b-detection)
+* [Tachyons for CSS](https://tachyons.io/)
+* [react-particles for website background](https://www.npmjs.com/package/react-particles-js)
+* [react-tilt for creating a logo](https://www.npmjs.com/package/react-tilt)
 
 
 

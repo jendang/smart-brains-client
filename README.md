@@ -72,6 +72,6 @@ I created a project to manage my workflow inside the git repository. I divided m
 * [react-particles for website background](https://www.npmjs.com/package/react-particles-js)
 * [react-tilt for creating a logo](https://www.npmjs.com/package/react-tilt)
 
-
+For more information about this project, please feel free to [contact me](https://www.linkedin.com/in/jennydang/)
 
 
